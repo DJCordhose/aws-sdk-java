@@ -6,7 +6,7 @@
     <artifactId>aws-java-sdk</artifactId>
     <packaging>jar</packaging>
     <name>AWS SDK for Java</name>
-    <version>1.3.28</version>
+    <version>1.3.28.patched-GAE</version>
     <description>The Amazon Web Services SDK for Java provides Java APIs for building software on AWS’ cost-effective, scalable, and reliable infrastructure products. The AWS Java SDK allows developers to code against APIs for all of Amazon's infrastructure web services (Amazon S3, Amazon EC2, Amazon SQS, Amazon Relational Database Service, Amazon AutoScaling, etc).</description>
     <url>http://aws.amazon.com/sdkforjava</url>
 
@@ -107,21 +107,6 @@
             <optional>true</optional>
         </dependency>
 
-
-        <!-- JDK 1.6 and above include StAX support by default, so these two dependencies
-             are only needed for compiling/running against a 1.5 JVM.  -->
-        <dependency>
-            <groupId>stax</groupId>
-            <artifactId>stax-api</artifactId>
-            <version>1.0.1</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>stax</groupId>
-            <artifactId>stax</artifactId>
-            <version>1.2.0</version>
-            <optional>true</optional>
-        </dependency>
     </dependencies>
 
     <developers>
@@ -142,8 +127,8 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
-              <source>1.5</source>
-              <target>1.5</target>
+              <source>1.6</source>
+              <target>1.6</target>
               <encoding>UTF-8</encoding>
             </configuration>
           </plugin>

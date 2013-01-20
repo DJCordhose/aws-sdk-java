@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
  */
 package com.amazonaws;
 
+import com.amazonaws.http.HttpClientFactory;
 import com.amazonaws.util.VersionInfoUtils;
 /**
  * Client configuration options such as proxy settings, user agent string, max
@@ -99,6 +100,7 @@ public class ClientConfiguration {
      */
     private int socketReceiveBufferSizeHint = 0;
 
+    private HttpClientFactory httpClientFactory;
 
     public ClientConfiguration() {}
 
@@ -118,6 +120,8 @@ public class ClientConfiguration {
 
         this.socketReceiveBufferSizeHint = other.socketReceiveBufferSizeHint;
         this.socketSendBufferSizeHint    = other.socketSendBufferSizeHint;
+        
+        this.httpClientFactory = other.httpClientFactory;
     }
 
     /**
@@ -713,4 +717,13 @@ public class ClientConfiguration {
         return this;
     }
 
+	public HttpClientFactory getHttpClientFactory() {
+		return httpClientFactory;
+	}
+
+	public void setHttpClientFactory(HttpClientFactory httpClientFactory) {
+		this.httpClientFactory = httpClientFactory;
+	}
+
+    
 }

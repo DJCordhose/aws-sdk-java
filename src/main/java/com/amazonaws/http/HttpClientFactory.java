@@ -57,7 +57,7 @@ import com.amazonaws.AmazonClientException;
 import com.amazonaws.ClientConfiguration;
 
 /** Responsible for creating and configuring instances of Apache HttpClient4. */
-class HttpClientFactory {
+public class HttpClientFactory {
 
     /**
      * Creates a new HttpClient object using the specified AWS

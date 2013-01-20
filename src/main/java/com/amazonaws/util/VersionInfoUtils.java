@@ -120,10 +120,6 @@ public class VersionInfoUtils {
 		StringBuilder buffer = new StringBuilder( 1024 );
 		buffer.append( "aws-sdk-" + VersionInfoUtils.getPlatform().toLowerCase() + "/" );
 		buffer.append( VersionInfoUtils.getVersion() );
-		buffer.append( " " );
-		buffer.append( System.getProperty( "os.name" ).replace( ' ', '_' ) + "/" + System.getProperty( "os.version" ).replace( ' ', '_' ) );
-		buffer.append( " " );
-		buffer.append( System.getProperty( "java.vm.name" ).replace( ' ', '_' ) + "/" + System.getProperty( "java.vm.version" ).replace( ' ', '_' ) );
 		
 		String region = "";
 		try {

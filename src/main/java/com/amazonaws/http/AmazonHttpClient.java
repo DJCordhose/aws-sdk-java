@@ -109,6 +109,9 @@ public class AmazonHttpClient {
      */
     public AmazonHttpClient(ClientConfiguration clientConfiguration) {
         this.config = clientConfiguration;
+        if(clientConfiguration.getHttpClientFactory() != null) {
+        	httpClientFactory = clientConfiguration.getHttpClientFactory();
+        }
         this.httpClient = httpClientFactory.createHttpClient(config);
     }
 
